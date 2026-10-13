@@ -1,0 +1,33 @@
+.icons {
+  width: 25px;
+}
+
+.logo {
+  width: 600px;
+}
+
+.img-text {
+  background-image: url("/img/heroImg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
