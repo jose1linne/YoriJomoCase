@@ -1,5 +1,5 @@
 .img-text {
-  background-image: url("/img/heroImg.png");
+  background-image: url("img/heroImg.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: linear-gradient(rgba(255, 255, 255, 0.234), rgba(255, 255, 255, 0.234)), url("/img/heroImg.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.234), rgba(255, 255, 255, 0.234)), url("img/heroImg.png");
   background-size: cover;
   background-position: center;
 }
@@ -154,7 +154,7 @@
   }
 }
 .img-text-about {
-  background-image: url("/img/aboutMobil.png");
+  background-image: url("img/aboutMobil.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -162,7 +162,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: linear-gradient(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.34)), url("/img/aboutMobil.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.34)), url("img/aboutMobil.png");
   background-size: cover;
   background-position: center;
 }
@@ -213,6 +213,6 @@
   }
 
   .img-text-about {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.234), rgba(255, 255, 255, 0.234)), url("/img/AboutImg.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.234), rgba(255, 255, 255, 0.234)), url("img/AboutImg.png");
   }
 }
