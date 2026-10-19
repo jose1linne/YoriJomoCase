@@ -23,7 +23,10 @@ System styles
 }
 
 body {
-  font-family: var(--font-family-sans);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -62,13 +65,15 @@ select {
 
 :root {
   /* farver*/
-  --color-bg-primary: #fffdfa;
-  --color-bg-secondary: #f8f3ef;
+  --color-primary: #fffdfa; /* En blålig primærfarve */
+  /* --color-primary-light: rgba(99, 156, 255, 1); */
+  --color-primary-dark: #7a4a2f;
+  --color-secondary: rgba(249, 115, 22, 1); /* En orange sekundærfarve */
+  --color-secondary-light: rgba(251, 146, 60, 1);
+  --color-secondary-dark: rgba(234, 88, 12, 1);
+  --color-dark: rgb(11, 10, 10);
+  --color-bright: rgba(249, 250, 251, 1);
   --color-btn: #262410;
-  --color-btn-hover: #f8f3ef;
-
-  --color-text-light: #262410;
-  --color-text-dark: #fffdfa;
 
   /* Spacing */
   --space-zero: 0;
@@ -92,8 +97,8 @@ select {
 
   /* Fonte */
   --font-family-sans: "Nunito Sans", sans-serif;
-  --font-family-serif: serif;
-  --font-family-mono: monospace;
+  --font-family-serif: "Nunito Sans", sans-serif;
+  --font-family-mono: "Nunito Sans", sans-serif;
 
   /* Containers */
   --container-full: 100%;
@@ -259,13 +264,13 @@ select {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--space-sm);
-  margin: 0 calc(var(--space-sm) / 2);
+  /* margin: 0 calc(var(--space-sm) / 2); */
   grid-auto-rows: minmax(var(--space-xl), auto);
 }
 @media (min-width: 400px) {
   .grid {
     gap: var(--space-md);
-    margin: 0 calc(var(--space-md) / 2);
+    /* margin: 0 calc(var(--space-md) / 2); */
   }
 }
 
@@ -861,9 +866,9 @@ h3,
 .text-xl,
 .text-lg,
 .text-md {
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-bold);
   margin-bottom: var(--space-md);
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family-serif);
   line-height: 1.5;
 }
 .text-sm {
@@ -876,6 +881,7 @@ h1,
 h2,
 .text-lg {
   font-size: var(--font-size-lg);
+  font-weight: 100;
 }
 h3,
 .text-md {
@@ -973,7 +979,7 @@ select {
   padding: var(--space-sm) var(--space-md);
   border: 1px solid #d1d5db;
   border-radius: var(--radius-sm);
-  font-family: var(--font-family-sans);
+  font-family: inherit;
   font-size: var(--font-size-base);
   transition:
     border-color 0.2s ease,
@@ -1045,8 +1051,9 @@ input[type="submit"],
 button,
 .btn {
   background-color: var(--color-btn);
-  color: var(--color-text-dark);
+  color: var(--color-bright);
   padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-dark);
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -1055,9 +1062,9 @@ button,
 input[type="submit"]:hover,
 button:hover,
 .btn:hover {
-  background-color: var(--color-btn-hover);
+  background-color: var(--color-primary-dark);
   text-decoration: none;
-  color: var(--color-text-light);
+  color: var(--color-bright);
 }
 
 /* Knap-varianter */
@@ -1442,10 +1449,6 @@ img {
 }
 .mobile-menu a {
   padding: var(--space-sm) 0;
-}
-.logo,
-.navicon {
-  z-index: 1001;
 }
 
 /* Cards */

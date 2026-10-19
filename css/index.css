@@ -1,33 +1,218 @@
-.icons {
-  width: 25px;
-}
-
-.logo {
-  width: 600px;
-}
-
 .img-text {
   background-image: url("/img/heroImg.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+
+  background-image: linear-gradient(rgba(255, 255, 255, 0.234), rgba(255, 255, 255, 0.234)), url("/img/heroImg.png");
+  background-size: cover;
+  background-position: center;
 }
 
-header {
+.hero-content {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+.about-text {
+  padding-top: 170px;
+}
+
+.logo {
+  width: 400px;
+  max-width: 100%;
+}
+
+.textHero {
+  margin: 0;
+}
+
+.logo-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+:root {
+  --icon-size: 22px;
+}
+
+.cart-link svg,
+.heart-link svg,
+.search-link svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: block;
+}
+
+/*** kollektioner ***/
+.collection-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
-.navList {
+/**** Generel ****/
+
+.spacing-box1 {
+  margin-top: 100px;
+}
+
+.spacing-box2 {
+  margin-bottom: 200px;
+}
+
+/*** retailers ***/
+
+.retailers {
+  padding: 200px 0;
+  text-align: center;
+}
+.street img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*** footer ****/
+.footer {
+  background: #fffefb;
+  padding: 96px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer a {
+  color: #262119;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-logo {
+  width: 380px;
+  max-width: 100%;
+  display: block;
+}
+
+.footer-policies {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 64px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 56px 24px;
+  }
+
+  .footer-logo {
+    width: 300px;
+    max-width: 100%;
+  }
+
+  .footer-policies {
+    gap: 2px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  :root {
+    --icon-size: 16px;
+  }
+
+  .spacing-box1 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+.img-text-about {
+  background-image: url("/img/aboutMobil.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.34)), url("/img/aboutMobil.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.spacing-box1 .grid,
+.spacing-box2 .grid {
+  position: relative;
+}
+
+.spacing-box1 img,
+.spacing-box2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.spacing-box1 .collection-box,
+.spacing-box2 .collection-box {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  top: auto;
+  transform: translateX(-50%);
+  width: auto;
+  z-index: 1;
+}
+
+.spacing-box1 .grid::after,
+.spacing-box2 .grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.234);
+  pointer-events: none;
+}
+
+.spacing-box1 .collection-box,
+.spacing-box2 .collection-box {
+  z-index: 2; /* så teksten ligger over overlayet */
+}
+
+@media (min-width: 768px) {
+  .spacing-box1 .collection-box,
+  .spacing-box2 .collection-box {
+    position: static;
+    transform: none;
+    width: auto;
+  }
+
+  .img-text-about {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.234), rgba(255, 255, 255, 0.234)), url("/img/AboutImg.png");
+  }
 }

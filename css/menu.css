@@ -1,0 +1,211 @@
+:root {
+  --icon-size: 22px;
+}
+
+/* ================= DESKTOP (standard) ================= */
+header {
+  position: relative;
+  z-index: 1000;
+  background: transparent;
+  padding: 8px 24px 24px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+}
+
+.logo-link {
+  display: block;
+}
+
+.header-logo {
+  display: block;
+  width: 260px;
+  height: auto;
+}
+
+.burger {
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.menu a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Ikoner øverst til højre */
+.icons {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.icons a {
+  display: block;
+  line-height: 0;
+}
+
+.icons svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: block;
+}
+
+/* Ikon-styling */
+.cart-body {
+  fill: none;
+  stroke: #262119;
+  stroke-width: 2px;
+  transition: fill 0.2s ease;
+}
+.cart-handle {
+  fill: #262119;
+}
+.cart-link:hover .cart-body {
+  fill: #262119;
+}
+
+.heart-shape {
+  fill: none;
+  stroke: #262119;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  transition: fill 0.2s ease;
+}
+.heart-link:hover .heart-shape {
+  fill: #262119;
+}
+
+.search-lens {
+  fill: none;
+  stroke: #262119;
+  stroke-width: 3px;
+  transition: fill 0.2s ease;
+}
+.search-handle {
+  fill: none;
+  stroke: #262119;
+  stroke-width: 4px;
+}
+.search-link:hover .search-lens {
+  fill: #262119;
+}
+
+/* ================= MOBIL ================= */
+@media (max-width: 767px) {
+  :root {
+    --icon-size: 32px;
+  }
+
+  header {
+    padding: 0 24px;
+    height: 80px;
+    background: #fdfbf7;
+  }
+
+  .header-top {
+    position: relative;
+    z-index: 102; /* over overlayet */
+    justify-content: space-between;
+    height: 80px;
+    min-height: 0;
+  }
+
+  .header-logo {
+    width: auto;
+    height: 24px;
+  }
+
+  /* Burger */
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 28px;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .burger .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #2a2622;
+    transition:
+      transform 0.3s ease,
+      opacity 0.2s ease;
+  }
+
+  .burger[aria-expanded="true"] .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .burger[aria-expanded="true"] .line:nth-child(2) {
+    opacity: 0;
+  }
+  .burger[aria-expanded="true"] .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Fuldskærms-overlay */
+  nav {
+    position: fixed;
+    inset: 0;
+    /* z-index: 999; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 140px;
+    background: #f6f3ee;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  nav.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 0;
+  }
+
+  .menu a {
+    font-size: 1.25rem;
+    color: #000;
+  }
+
+  /* Ikoner under menuen i stedet for øverst til højre */
+  .icons {
+    position: static;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}

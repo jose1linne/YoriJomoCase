@@ -12,117 +12,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/generel.css">
+    <link rel="stylesheet" href="css/menu.css">
     <title>Forside</title>
 </head>
 
 <body>
     <header>
-        <img class="logo" src="/img/logo.png" alt="logo">
+        <div class="header-top">
+            <a class="logo-link" href="index.html">
+                <img class="header-logo" src="/icons/logo.svg" alt="Yori Jomo">
+            </a>
 
-        <ul class="navList">
-            <li>Products</li>
-            <li>About</li>
-            <li>Retailers</li>
-            <li>Cart</li>
-        </ul>
+            <button class="burger" aria-label="Åbn menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
 
-        <ul>
-            <li> <img class="icons" src="/icons/sog.png" alt="Søg"></li>
-            <li><img class="icons" src="/icons/like.png" alt="Liket"></li>
-            <li><img class="icons" src="/icons/kurv.png" alt="kurv"></li>
-        </ul>
+        <nav id="main-nav">
+            <ul class="menu">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Retailers</a></li>
+            </ul>
 
+            <div class="icons">
+                <a href="#" class="search-link" aria-label="Søg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 42" aria-hidden="true">
+                        <path class="search-lens"
+                            d="M40,7.63c4.23,6.17,2.64,14.6-3.55,18.82-6.19,4.22-14.63,2.63-18.86-3.54-4.23-6.17-2.64-14.6,3.55-18.82C27.32-.12,35.77,1.46,40,7.63Z" />
+                        <path class="search-handle" d="M1.35 40.45 L18.8 24.4" />
+                    </svg>
+                </a>
+                <a href="#" class="heart-link" aria-label="Favoritter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 28" aria-hidden="true">
+                        <path class="heart-shape"
+                            d="M29.04,11.27c-1.69,2.71-9.39,11.12-13.16,15.55-.2.24-.56.24-.76,0C11.34,22.39,3.65,13.98,1.96,11.27-.16,7.88,1.04,1,7.6,1c4.81,0,6.47,4.51,7.5,7.02.16.38.65.38.82,0,1.09-2.51,2.97-7.03,7.49-7.03,6.56,0,7.76,6.88,5.64,10.27Z" />
+                    </svg>
+                </a>
+                <a href="#" class="cart-link" aria-label="Kurv">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 29" aria-hidden="true">
+                        <path class="cart-body" d="M27,10.52v14.18c0,.5-.45.91-1,.91H2c-.55,0-1-.4-1-.91v-14.18h26Z" />
+                        <path class="cart-handle"
+                            d="M14.8,0c4.59.29,8.26,4.95,8.42,10.73h-2c-.16-5.27-3.55-8.74-6.87-8.74s-6.72,3.47-6.87,8.74h-2C5.63,4.77,9.54,0,14.34,0h.46Z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section class="container-full, img-text">
-
-            <div>
-                <img src="/img/logo.png" alt="logo">
+        <section class="container-full img-text">
+            <div class="hero-content">
+                <img class="logo" src="/icons/logo.svg" alt="logo">
                 <p class="textHero">
                     Yori Jomo creates timeless footwear by combining traditional craftsmanship, quality materials and
-                    contemporary
-                    Scandinavian design.
+                    contemporary Scandinavian design.
                 </p>
-                <button>
-                    Shop
-                </button>
+                <button>Shop</button>
             </div>
         </section>
 
-        <section>
-            <div>
+        <section class="spacing-box1">
+            <div class="d-flex flex-column align-items-center text-center">
                 <h2>Collections</h2>
             </div>
 
-            <div>
-                <div><img src="/img/skoImg.png" alt="sko"></div>
+            <div class="container-full mobile-collection">
+                <div class="grid">
+                    <div class="col-12 col-sm-6"><img class="collectionsImg" src="/img/skoImg.png" alt="sko"></div>
 
-                <div>
-                    <h2>Shoes</h2>
-                    <button>Shop</button>
+                    <div
+                        class="col-12 col-sm-6 d-flex flex-column justify-content-center align-items-center text-center collection-box">
+                        <h2>Shoes</h2>
+                        <button>Shop</button>
+                    </div>
                 </div>
-
-
             </div>
         </section>
 
-        <section>
-            <div>
-                <div>
-                    <h2>Belts</h2>
-                    <button>Shop</button>
-                </div>
+        <section class="spacing-box2">
+            <div class="container-full">
+                <div class="grid">
+                    <div
+                        class="col-12 col-sm-6 d-flex flex-column justify-content-center align-items-center text-center collection-box">
+                        <h2>Belts</h2>
+                        <button>Shop</button>
+                    </div>
 
-                <div><img src="/img/baelteImg.png" alt="bælter"></div>
+                    <div class="col-12 col-sm-6"><img class="collectionsImg" src="/img/baelteImg.png" alt="bælter">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section>
-            <div><img src="/img/AboutImg.png" alt="about them"></div>
 
-            <div>
-                <h2>About</h2>
-                <p>From carefully selected materials to the final stitch, every Yori Jomo shoe is shaped by skilled
+        <section class="container-full img-text-about">
+
+            <div class="hero-content about-text">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <h2>About</h2>
+                </div>
+                <p class="textHero">From carefully selected materials to the final stitch, every Yori Jomo
+                    shoe is
+                    shaped by skilled
                     craftsmanship and
                     attention to detail.</p>
                 <button>Read more</button>
             </div>
         </section>
 
-        <section>
+        <section class="retailers">
             <h2>Retailers</h2>
-            <div>
-                <button>Find us here</button>
+            <div class="street">
+                <img src="/img/retailersImg.svg" alt="Tegning af butikker i en gade">
+                <button class="">Find us in store</button>
             </div>
         </section>
+
     </main>
-    <footer>
-        <section>
-            <div>
-                <div><img src="/img/logo.png" alt="logo"></div>
 
-                <ul>
-                    <li>Privacy policy
-                    </li>
-                    <li>Terms of service</li>
-                    <li>Legal notice</li>
-                    <li>Refund policy</li>
 
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>Nyhedsbrev</li>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>Find retailers</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-        </section>
+    <footer class="footer">
+        <div class="footer-left">
+            <a href="/" class="footer-logo-link">
+                <img class="footer-logo" src="/icons/logo.svg" alt="Yori Jomo">
+            </a>
 
+            <ul class="footer-policies">
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Legal notice</a></li>
+                <li><a href="#">Refund policy</a></li>
+            </ul>
+        </div>
+
+        <ul class="footer-links">
+            <li><a href="#">Sign up for our newsletter</a></li>
+            <li><a href="#">Find retailers</a></li>
+            <li><a href="#">Our Instagram</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
     </footer>
+    <script src="./menu.js"></script>
 </body>
+
+
 
 </html>
